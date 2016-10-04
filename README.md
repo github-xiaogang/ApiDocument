@@ -1,8 +1,8 @@
 # ApiDocument
-收集常用第三方Api基本信息(下载地址、更新日志)
+
+收集第三方Api信息(文档说明，api下载地址、更新历史)
 
 [查看Api文档][apidocument]
-
 
 
 
