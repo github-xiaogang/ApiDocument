@@ -31,7 +31,43 @@ V3.1.0完整包更新了以下内容：
 
 整理时间 2016.10.4
 
+###微博 iOS SDK
+```
+由于iOS10的发布，原有ATS设置在iOS10上会出现https网络访问限制的问题，为了确保好的应用体验，我们需要采取如下措施：
 
+<key>sina.com.cn</key>
+<dict>
+<key>NSIncludesSubdomains</key>
+<true/>
+<key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
+<true/>
+<key>NSExceptionMinimumTLSVersion</key>
+<string>TLSv1.0</string>
+<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+<false/>
+</dict>
+
+需要在每一个域名下添加NSExceptionMinimumTLSVersion这样的key，值的部分为TLSv1.0
+```
+- [文档][weibo_ios_api]
+- [下载地址][weibo_ios_download] 
+- [版本历史][weibo_ios_version]
+
+整理时间 2016.10.5
+
+###环信IM iOS SDK `V2.2.7` `2016-09-08`
+```
+SDK细节调整:
+
+SDK中检查附件大小，附件大小不恰当时返回错误
+群组批量加人时合并了加人请求，避免耗时随着人数增加
+改善会话加载消息时的性能
+```
+- [文档][easemob_ios_api]
+- [下载地址][easemob_ios_download] 
+- [版本历史][easemob_ios_version]
+
+整理时间 2016.10.5
 
 
 
@@ -45,6 +81,25 @@ V3.1.0完整包更新了以下内容：
 [qq_ios_api]: http://wiki.open.qq.com/wiki/IOS_API%E8%B0%83%E7%94%A8%E8%AF%B4%E6%98%8E
 [qq_ios_download]: http://wiki.open.qq.com/wiki/mobile/SDK%E4%B8%8B%E8%BD%BD
 [qq_ios_version]: http://wiki.open.qq.com/wiki/IOS_API%E8%B0%83%E7%94%A8%E8%AF%B4%E6%98%8E
+
+[weibo_ios_api]: http://open.weibo.com/wiki/IOS_SDK
+[weibo_ios_download]: https://github.com/sinaweibosdk/weibo_ios_sdk
+[weibo_ios_version]: https://github.com/sinaweibosdk/weibo_ios_sdk
+
+[easemob_ios_api]: http://docs.easemob.com/start/300iosclientintegration/10prepareforsdkimport
+[easemob_ios_download]: http://www.easemob.com/download/im
+[easemob_ios_version]: http://docs.easemob.com/start/300iosclientintegration/110release_note
+
+
+
+
+
+
+
+
+
+
+
 
 
 
