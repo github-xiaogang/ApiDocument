@@ -133,10 +133,11 @@ Bug Fix:
 
 整理时间 2016.10.12
 
-###有赞 iOS SDK `3.2.0` `2016-08-18`
+###有赞 iOS SDK `3.3.0` `2016-10-17`
 ```
-1.修复bitcode的bug;
-2.优化Demo中对有赞预加载链接的过滤.
+1.优化登录接口容错;
+2.优化登出接口;
+3.废弃导航栏相关接口.
 ```
 - [介绍][youzan_ios]
 - [文档][youzan_ios_api]
@@ -158,6 +159,31 @@ Bug Fix:
 - [版本历史][youzan_android_version]
 
 整理时间 2016.10.11
+
+###支付宝 iOS SDK `15.2.0` `2016-08-23`
+```
+1. 增加支付宝支付和授权2.0体系服务；
+2. 完全兼容1.0体系，授权和支付接口保持不变；
+3. 订单组装问题修复。
+```
+- [介绍][alipay_ios]
+- [文档][alipay_ios_api]
+- [下载地址][alipay_ios_download] 
+- [版本历史][alipay_ios_version]
+
+整理时间 2016.10.22
+
+###支付宝 Android SDK `15.2.4` `2016-10-11`
+```
+1. 新增readme.txt；
+2. 修复了2.3系统crash的问题。
+```
+- [介绍][alipay_android]
+- [文档][alipay_android_api]
+- [下载地址][alipay_android_download] 
+- [版本历史][alipay_android_version]
+
+整理时间 2016.10.22
 
 
 
@@ -205,7 +231,15 @@ Bug Fix:
 [youzan_android_download]: http://open.youzan.com/sdk/doc#417
 [youzan_android_version]: http://open.youzan.com/sdk/doc#422
 
+[alipay_ios]: https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.20pcDR&treeId=193&articleId=105051&docType=1
+[alipay_ios_api]: https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.oIB0l5&treeId=193&articleId=105295&docType=1
+[alipay_ios_download]: https://doc.open.alipay.com/doc2/detail.htm?treeId=54&articleId=104509&docType=1
+[alipay_ios_version]: https://doc.open.alipay.com/doc2/detail.htm?treeId=54&articleId=104509&docType=1
 
+[alipay_android]: https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.20pcDR&treeId=193&articleId=105051&docType=1
+[alipay_android_api]: https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.3SIiTz&treeId=193&articleId=105296&docType=1
+[alipay_android_download]: https://doc.open.alipay.com/doc2/detail.htm?treeId=54&articleId=104509&docType=1
+[alipay_android_version]: https://doc.open.alipay.com/doc2/detail.htm?treeId=54&articleId=104509&docType=1
 
 
 
