@@ -1,61 +1,52 @@
 
 
 
-###微信 iOS SDK `1.7.3`
+###微信 iOS SDK `1.7.6`
 ```
-1. 增强稳定性，适配iOS10
-2. 修复小于32K的jpg格式缩略图设置失败的问题
+1. 提高稳定性
+2 修复mta崩溃
+3  新增接口支持开发者关闭mta数据统计上报
 ```
 - [文档][wechat_ios_api]
 - [下载地址][wechat_ios_download] 
 
-整理时间 2016.10.4
+整理时间 2017.3.25
 
-###微信 Android SDK `3.1.1`
+###微信 Android SDK `4.0.2`
 ```
 暂无
 ```
 - [文档][wechat_android_api]
 - [下载地址][wechat_android_download] 
 
-整理时间 2016.10.11
+整理时间 2017.3.25
 
-###腾讯 iOS SDK `3.1.0` `2016-05-17`
+###腾讯 iOS SDK `3.1.3` `2016-12-06`
 ```
-V3.1.0完整包更新了以下内容：
-新增功能：
-一键加群功能
-
-修正以下功能：
-1. 修正 log 文件从 document 目录移到Caches目录；
-2. 修正通过h5 登录，分享到手Q提示账号不符合；
-3. 修正分享到群部落；
-4. 修正sdk添加游戏好友获取好友设置失败；
-5. 修复登录webview界面，放大镜穿透的问题；
-6. 支持cpu指令集版本由arm7、arm7s、arm64、i386 、x86_64 变更到 armv7、x86_64、arm64
+V3.1.3完整包更新了以下内容：
+1、内部网络接口全面支持https
+2、修复和第三方hook消息转发可能Crash的问题
+3、支持cpu指令集补充对模拟器的支持
 ```
 
 - [文档][qq_ios_api]
 - [下载地址][qq_ios_download] 
 - [版本历史][qq_ios_version]
 
-整理时间 2016.10.4
+整理时间 2017.3.25
 
-###腾讯 Android SDK `3.1.0` `2016-05-24`
+###腾讯 Android SDK `3.1.3` `2016-12-06`
 ```
-V3.1.0 SDK基础包更新如下内容：
-修正以下功能：
-1. 解决arm64-v8a架构下，在H5登录页面输入完帐号密码后点击登录时的崩溃问题；
-2. 解决因FloatMath在Android 6.0上被去掉而导致使用了FloatMath的TouchView编译不过问题；
-3. 解决横屏应用分享时可能接收不到回调和界面异常的问题；
-4. 优化安装包大小；
-5. 其他bug修复。
+V3.1.3基础包更新了以下内容：
+1、内部网络接口全面支持https
+2、修复和第三方hook消息转发可能Crash的问题
+3、支持cpu指令集补充对模拟器的支持
 ```
 
 - [文档][qq_android_api]
 - [下载地址][qq_android_download] 
 
-整理时间 2016.10.12
+整理时间 2017.3.25
 
 ###微博 iOS SDK `3.1.4` `2016-07-12`
 ```
@@ -96,94 +87,92 @@ V3.1.0 SDK基础包更新如下内容：
 
 整理时间 2016.10.12
 
-###环信IM(V2.0) iOS SDK `2.2.7` `2016-09-08`
+###环信IM(V2.0) iOS SDK `2.3.1` `2017-02-17`
 ```
-SDK细节调整:
+新功能/改进:
 
-SDK中检查附件大小，附件大小不恰当时返回错误
-群组批量加人时合并了加人请求，避免耗时随着人数增加
-改善会话加载消息时的性能
+修改HttpsOnly参数默认值,默认设置为NO(由于苹果强制ATS政策延缓, 所以SDK默认关闭httpsOnly)
+[[EaseMob sharedInstance].chatManager setIsUseHttpsOnly:YES];//设置httpsonly,YES开启,NO关闭
+增加获取日志压缩文件路径接口(具体上传日志方式可由开发者决定, Demo是通过邮件的形式上报日志)
+优化群组过多时重连卡顿问题
+修复离线已读回执有时丢失问题
+修复SDK收到特殊消息闪退问题
 ```
 - [介绍][easemob_ios]
 - [文档][easemob_ios_api]
 - [下载地址][easemob_ios_download] 
 - [版本历史][easemob_ios_version]
 
-整理时间 2016.10.5
+整理时间 2017.3.25
 
-###环信IM(V2.0) Android SDK `2.3.2` `2016-09-06`
+###环信IM(V2.0) Android SDK `2.3.4` `2017-02-10`
 ```
 新功能/改进：
 
-web端和手机端同时登陆时可以同步接收自己在另外一端发送的消息
-增加被kill后自启动的概率，需要在mianifests文件中加上以下声明
-<service
-android:name="com.easemob.chat.EMJobService"
-android:permission="android.permission.BIND_JOB_SERVICE"
-android:exported="true"
-/>        
+修复R1版本使用华为推送报错的问题
+增加修改群描述方法EMGroupManager::changeGroupDescription()
+EMChat::setServerAddress()方法支持设置https地址
+EMContactManager增加addContactListener(EMContactListener contactListener)方法，方便app在不同类里监听好友变动
 Bug Fix:
 
-修复没有启动守护进程的bug
+修复REST短时间内发多条相同内容的消息，客户端只显示一条的bug
+修复搜索有时候返回结果不对的bug
+修复上个版本出现的个别情况下堆栈溢出的问题
 ```
 - [介绍][easemob_android]
 - [文档][easemob_android_api]
 - [下载地址][easemob_android_download] 
 - [版本历史][easemob_android_version]
 
-整理时间 2016.10.12
+整理时间 2017.3.25
 
-###有赞 iOS SDK `3.3.0` `2016-10-17`
+###有赞 iOS SDK `4.0.4` `2017-02-18`
 ```
-1.优化登录接口容错;
-2.优化登出接口;
-3.废弃导航栏相关接口.
+1.适配有赞新域名
 ```
 - [介绍][youzan_ios]
 - [文档][youzan_ios_api]
 - [下载地址][youzan_ios_download] 
 - [版本历史][youzan_ios_version]
 
-整理时间 2016.10.11
+整理时间 2017.3.25
 
-###有赞 Android SDK `3.0.2` `2016-08-18`
+###有赞 Android SDK `3.1.0` `2017-02-18`
 ```
-1.修改YouzanBrowser整体架构不再注入开发者对client使用过程;
-2.支持跳转支付宝App支付;
-3.部分bug修复;
-4.移除YouzanBridge.
+1.适配有赞域名切换;
+
+2.优化以及累积bug修复;
 ```
 - [介绍][youzan_android]
 - [文档][youzan_android_api]
 - [下载地址][youzan_android_download] 
 - [版本历史][youzan_android_version]
 
-整理时间 2016.10.11
+整理时间 2017.3.25
 
-###支付宝 iOS SDK `15.2.0` `2016-08-23`
+###支付宝 iOS SDK `15.2.1` `2016-12-24`
 ```
-1. 增加支付宝支付和授权2.0体系服务；
-2. 完全兼容1.0体系，授权和支付接口保持不变；
-3. 订单组装问题修复。
+更新点：
+1. webview屏蔽alipayjsbridge的调用。
 ```
 - [介绍][alipay_ios]
 - [文档][alipay_ios_api]
 - [下载地址][alipay_ios_download] 
 - [版本历史][alipay_ios_version]
 
-整理时间 2016.10.22
+整理时间 2017.3.25
 
-###支付宝 Android SDK `15.2.4` `2016-10-11`
+###支付宝 Android SDK `15.3.3` `2016.12.22`
 ```
-1. 新增readme.txt；
-2. 修复了2.3系统crash的问题。
+更新点：
+1. 体验优化。
 ```
 - [介绍][alipay_android]
 - [文档][alipay_android_api]
 - [下载地址][alipay_android_download] 
 - [版本历史][alipay_android_version]
 
-整理时间 2016.10.22
+整理时间 2017.3.25
 
 
 
